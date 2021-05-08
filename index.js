@@ -6,14 +6,14 @@ class Formatter {
   static sanitize(sant){
     return sant.replace(/[^a-z0-9+ /'-]+/gi, '')
   }
-  static titleize(){
-    let arr = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
+  static titleize(s){
+    let arr1 = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
         let sa = s.split(" ")
         let result = sa.map((el,i) =>{
           if(i===0){
             return this.capitalize(el)
           }
-          if (arr.find(e=> e === el)){
+          if (arr1.find(e=> e === el)){
             return el
           }
           return this.capitalize(el)
