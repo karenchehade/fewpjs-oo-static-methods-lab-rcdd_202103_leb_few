@@ -1,5 +1,5 @@
 class Formatter {
-<<<<<<< HEAD
+
   static capitalize(str){
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
@@ -7,17 +7,22 @@ class Formatter {
     return sant.replace(/[^a-z0-9+ /'-]+/gi, '')
   }
   static titleize(){
+    let arr = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
+        let sa = s.split(" ")
+        let result = sa.map((el,i) =>{ 
+          if(i===0){
+            return this.capitalize(el)
+          }
+          if (arr.find(e=> e === el)){
+            return el
+          }
+          return this.capitalize(el)
 
+          })
+
+
+
+          return result.join(" ")
+
+      }
   }
-=======
-static capitalize(str){
-str[0].toUpperCase();
-}
-static sanitize(in){
-in.replace(/[^\w\s]/gi, '')
-}
-static titleize(){
-
-}
->>>>>>> f058c1aad46547d9ab71d143a78bbe2539f9bf58
-}
