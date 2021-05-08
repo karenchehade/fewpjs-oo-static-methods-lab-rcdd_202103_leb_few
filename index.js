@@ -9,7 +9,7 @@ class Formatter {
   static titleize(){
     let arr = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
         let sa = s.split(" ")
-        let result = sa.map((el,i) =>{ 
+        let result = sa.map((el,i) =>{
           if(i===0){
             return this.capitalize(el)
           }
